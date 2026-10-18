@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+# Give the OnePlus Gallery the media-write appops that the system gallery role
+# normally provides, so it can open and delete Camera's trashed files.
+on property:sys.boot_completed=1
+    exec_background u:r:shell:s0 shell shell -- /system/bin/cmd appops set --user 0 com.oneplus.gallery WRITE_MEDIA_IMAGES allow
+    exec_background u:r:shell:s0 shell shell -- /system/bin/cmd appops set --user 0 com.oneplus.gallery WRITE_MEDIA_VIDEO allow

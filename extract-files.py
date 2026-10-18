@@ -69,8 +69,8 @@ blob_fixups = {
 
 namespace_imports = [
     'vendor/oplus/camera/camera',
-    'vendor/oneplus/pagani',
-    'vendor/oneplus/sm8750-common',
+    'vendor/oneplus/wly',
+    'vendor/oneplus/sm8450-common',
     'hardware/oplus',
 ]
 

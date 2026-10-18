@@ -8,7 +8,12 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    vendor/oplus/camera/configs/init/init.oplus.camera.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.oplus.camera.rc
+    vendor/oplus/camera/configs/init/init.oplus.camera.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.oplus.camera.rc \
+    vendor/oplus/camera/configs/init/init.gallery_appops.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.gallery_appops.rc
+
+# Overlays
+PRODUCT_PACKAGES += \
+    GallerySystemGalleryOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \

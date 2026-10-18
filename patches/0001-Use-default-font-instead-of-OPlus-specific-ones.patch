@@ -1,25 +1,24 @@
-From 52a5388addc8578c3248e04269204932bfd59afe Mon Sep 17 00:00:00 2001
-From: RobertGarciaa <chae0218@naver.com>
-Date: Sat, 29 Aug 2026 23:03:13 +0900
-Subject: [PATCH 1/2] Use default font instead of OPlus specific ones
+From c42900cc9ce3dba03bc1343a1193f28c706609f7 Mon Sep 17 00:00:00 2001
+From: Arman <arman@localhost>
+Date: Sun, 18 Oct 2026 19:08:13 +0000
+Subject: [PATCH] Use default font instead of OPlus specific ones
 
-Signed-off-by: RobertGarciaa <chae0218@naver.com>
 ---
- smali/ia/y3.smali | 295 +-----------------------------------------------------
+ smali/g6/n3.smali | 295 +---------------------------------------------
  1 file changed, 3 insertions(+), 292 deletions(-)
 
-diff --git a/smali/ia/y3.smali b/smali/ia/y3.smali
-index fd13140..49d8f2a 100644
---- a/smali/ia/y3.smali
-+++ b/smali/ia/y3.smali
-@@ -269,300 +269,11 @@
+diff --git a/smali/g6/n3.smali b/smali/g6/n3.smali
+index c2a7208..9950e76 100644
+--- a/smali/g6/n3.smali
++++ b/smali/g6/n3.smali
+@@ -263,300 +263,11 @@
  .end method
-
+ 
  .method public static a(Landroid/content/Context;)Landroid/graphics/Typeface;
 -    .locals 6
 -
 -    .line 1
--    sget-object v0, Lia/o0;->a:Landroid/graphics/Typeface;
+-    sget-object v0, Lg6/j0;->a:Landroid/graphics/Typeface;
 -
 -    .line 2
 -    .line 3
@@ -120,7 +119,7 @@ index fd13140..49d8f2a 100644
 -    .line 48
 -    .line 49
 -    :try_start_1
--    sget-boolean v3, Lia/y3;->r:Z
+-    sget-boolean v3, Lg6/n3;->q:Z
 -
 -    .line 50
 -    .line 51
@@ -201,7 +200,7 @@ index fd13140..49d8f2a 100644
 -
 -    .line 87
 -    :cond_0
--    sget-boolean p0, Lia/y3;->r:Z
+-    sget-boolean p0, Lg6/n3;->q:Z
 -
 -    .line 88
 -    .line 89
@@ -247,7 +246,7 @@ index fd13140..49d8f2a 100644
 -
 -    .line 106
 -    .line 107
--    invoke-static {v0, v1, p0}, Lab/b;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+-    invoke-static {v0, v1, p0}, Lx6/a;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 -    :try_end_2
 -    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
 -    .catch Ljava/lang/NoSuchMethodError; {:try_start_2 .. :try_end_2} :catch_0
@@ -293,28 +292,28 @@ index fd13140..49d8f2a 100644
 -    move-result-object p0
 -
 -    .line 129
--    invoke-static {v0, p0}, Lab/b;->j(Ljava/lang/String;Ljava/lang/String;)V
+-    invoke-static {v0, p0}, Lx6/a;->h(Ljava/lang/String;Ljava/lang/String;)V
 -
 -    .line 130
 -    .line 131
 -    .line 132
 -    :cond_1
 -    :goto_2
--    sput-object v2, Lia/o0;->a:Landroid/graphics/Typeface;
+-    sput-object v2, Lg6/j0;->a:Landroid/graphics/Typeface;
 +    .locals 1
-
+ 
 -    .line 133
 -    .line 134
 -    :cond_2
--    sget-object p0, Lia/o0;->a:Landroid/graphics/Typeface;
+-    sget-object p0, Lg6/j0;->a:Landroid/graphics/Typeface;
 +    sget-object v0, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
-
+ 
 -    .line 135
 -    .line 136
 -    return-object p0
 +    return-object v0
  .end method
-
+ 
  .method public static b()Landroid/graphics/Typeface;
 -- 
-2.55.0
+2.43.0

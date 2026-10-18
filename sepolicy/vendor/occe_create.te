@@ -26,5 +26,3 @@ allow occe_create hwservicemanager:binder call;
 allow hwservicemanager occe_create:binder transfer;
 allow occe_create hal_graphics_mapper_hwservice:hwservice_manager find;
 get_prop(occe_create, hwservicemanager_prop)
-
-dontaudit occe_create vendor_hal_qspmhal_hwservice:hwservice_manager find;

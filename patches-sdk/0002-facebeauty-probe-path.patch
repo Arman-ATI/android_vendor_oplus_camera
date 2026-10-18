@@ -1,25 +1,26 @@
 From 4c8d6c3d397040cd34936501d144f8187993179c Mon Sep 17 00:00:00 2001
 From: RobertGarciaa <chae0218@naver.com>
 Date: Sat, 29 Aug 2026 23:26:28 +0900
-Subject: [PATCH 2/2] facebeauty: use system_ext for the camera library fallback
+Subject: [PATCH 2/2] facebeauty: use system_ext for the FaceBeauty JNI library
 
 Signed-off-by: RobertGarciaa <chae0218@naver.com>
 ---
- smali/com/oplus/ocs/camera/consumer/apsAdapter/adapter/ApsUtils.smali | 2 +-
+ smali/com/oplus/camera/facebeauty/OplusFaceBeautyPreview.smali | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/smali/com/oplus/ocs/camera/consumer/apsAdapter/adapter/ApsUtils.smali b/smali/com/oplus/ocs/camera/consumer/apsAdapter/adapter/ApsUtils.smali
-index 92ba393..e2238cf 100644
---- a/smali/com/oplus/ocs/camera/consumer/apsAdapter/adapter/ApsUtils.smali
-+++ b/smali/com/oplus/ocs/camera/consumer/apsAdapter/adapter/ApsUtils.smali
-@@ -960,7 +960,7 @@
-     return-object v0
+diff --git a/smali/com/oplus/camera/facebeauty/OplusFaceBeautyPreview.smali b/smali/com/oplus/camera/facebeauty/OplusFaceBeautyPreview.smali
+index 0000000..0000000 100644
+--- a/smali/com/oplus/camera/facebeauty/OplusFaceBeautyPreview.smali
++++ b/smali/com/oplus/camera/facebeauty/OplusFaceBeautyPreview.smali
+@@ -16,7 +16,7 @@
+     const-string v1, "ApsFaceBeautyPreviewJni"
  
-     :cond_0
--    const-string v0, "/product/lib64"
-+    const-string v0, "/system_ext/lib64"
+     const-string v2, "ApsFaceBeautyPreviewProductJni"
  
-     return-object v0
- .end method
+-    const-string v3, "/product/lib64/libApsFaceBeautyPreviewProductJni.so"
++    const-string v3, "/system_ext/lib64/libApsFaceBeautyPreviewProductJni.so"
+ 
+     if-eqz v0, :cond_2
+ 
 -- 
 2.55.0
